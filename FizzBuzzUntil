@@ -1,0 +1,14 @@
+const fizzbuzz = require('./fizzbuzz');
+
+// this is how you require files in JS
+
+
+function fizzbuzzUntil(number) {
+  for (let i = 1 ; i <= number ; i++) {
+    console.log(fizzbuzz(i));
+  }
+}
+
+module.exports = fizzbuzzUntil;
+
+// look up how to do in one file
