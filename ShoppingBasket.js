@@ -7,22 +7,14 @@ class ShoppingBasket {
 
   getTotalPrice() {
     console.log('Prices array:', this.prices);
-    const total = (candy) => { return candy.getPrice() };
-    if (this.prices.length > 1) {
-      return this.prices.map(total);
-    } else if (this.prices.length > 0) {
-      return this.prices;
-    } else {
-      return 0;
-    }
+    const total = this.prices.reduce((counter, value) => counter + value, 0);
+    return total;
   }
 
-  addItem(candy) {
-    // const food = (candy) => { ShoppingBasket.concat(candy)};
+  addItem() {
     this.names.push(candy.getName());
     this.prices.push(candy.getPrice());
   }
-
 }
 
 module.exports = ShoppingBasket;
